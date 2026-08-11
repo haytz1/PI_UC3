@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – AnimeSpot</title>
+  <meta name="description" content="Faça login no AnimeSpot e explore histórias, sinopses e universos dos seus animes favoritos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --bg-primary:#0a0010; --bg-secondary:#110020; --bg-card:#1a0035;
+      --purple-dark:#3b0070; --purple-mid:#7b2ff7; --purple-light:#a855f7;
+      --purple-glow:#c084fc; --purple-bright:#d946ef;
+      --text-main:#f0e6ff; --text-muted:#a78bca;
+      --border:rgba(123,47,247,0.35); --input-bg:rgba(30,0,60,0.6);
+    }
+    html,body { min-height:100vh; font-family:'Outfit',sans-serif; background-color:var(--bg-primary); color:var(--text-main); }
+    body {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%,rgba(123,47,247,.25) 0%,transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 80%,rgba(168,85,247,.12) 0%,transparent 60%),
+        radial-gradient(ellipse 40% 30% at 10% 90%,rgba(217,70,239,.10) 0%,transparent 60%),
+        var(--bg-primary);
+    }
+    body::before,body::after { content:''; position:fixed; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; animation:float 8s ease-in-out infinite; }
+    body::before { width:400px; height:400px; background:rgba(123,47,247,.18); top:-100px; left:-100px; }
+    body::after  { width:350px; height:350px; background:rgba(217,70,239,.12); bottom:-80px; right:-80px; animation-delay:-4s; }
+    @keyframes float { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(30px) scale(1.05);} }
+    .stars { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+    .star  { position:absolute; background:white; border-radius:50%; animation:twinkle var(--dur,3s) ease-in-out infinite; animation-delay:var(--del,0s); opacity:0; }
+    @keyframes twinkle { 0%,100%{opacity:0;transform:scale(.8);} 50%{opacity:var(--op,.6);transform:scale(1.2);} }
+    .page-wrapper { position:relative; z-index:1; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem 1rem; }
+    .login-card {
+      width:100%; max-width:460px;
+      background:rgba(17,0,32,.75); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+      border:1px solid var(--border); border-radius:24px; padding:2.8rem 2.5rem 2.5rem;
+      box-shadow:0 0 0 1px rgba(123,47,247,.15),0 8px 32px rgba(0,0,0,.6),0 0 80px rgba(123,47,247,.12),inset 0 1px 0 rgba(255,255,255,.05);
+      animation:slideUp .6s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes slideUp { from{opacity:0;transform:translateY(40px);} to{opacity:1;transform:translateY(0);} }
+    .logo-wrapper { display:flex; justify-content:center; margin-bottom:1.5rem; }
+    .logo-img { width:110px; height:110px; object-fit:contain; border-radius:20px; filter:drop-shadow(0 0 20px rgba(168,85,247,.6)); animation:logoPulse 3s ease-in-out infinite; }
+    @keyframes logoPulse { 0%,100%{filter:drop-shadow(0 0 20px rgba(168,85,247,.5));} 50%{filter:drop-shadow(0 0 35px rgba(217,70,239,.9));} }
+    .welcome-title { text-align:center; font-size:1.9rem; font-weight:800; background:linear-gradient(135deg,#e879f9,#a855f7 50%,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1.2; margin-bottom:.5rem; }
+    .subtitle { text-align:center; font-size:.95rem; color:var(--text-muted); margin-bottom:2rem; }
+    .form-group { margin-bottom:1.25rem; }
+    .form-label { display:block; font-size:.85rem; font-weight:600; color:var(--purple-glow); margin-bottom:.45rem; letter-spacing:.4px; text-transform:uppercase; }
+    .input-wrapper { position:relative; }
+    .input-icon { position:absolute; left:14px; top:50%; transform:translateY(-50%); width:18px; height:18px; color:var(--purple-mid); pointer-events:none; }
+    .form-input { width:100%; padding:.75rem 1rem .75rem 2.75rem; background:var(--input-bg); border:1px solid var(--border); border-radius:12px; color:var(--text-main); font-family:'Outfit',sans-serif; font-size:.97rem; transition:border-color .25s,box-shadow .25s,background .25s; outline:none; }
+    .form-input::placeholder { color:rgba(167,139,202,.5); }
+    .form-input:focus { border-color:var(--purple-mid); background:rgba(40,0,80,.7); box-shadow:0 0 0 3px rgba(123,47,247,.25),0 0 20px rgba(123,47,247,.1); }
+    .form-input:hover:not(:focus) { border-color:rgba(123,47,247,.55); }
+    .senha-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:.45rem; }
+    .forgot-link { font-size:.78rem; color:var(--purple-light); text-decoration:none; font-weight:500; transition:color .2s; }
+    .forgot-link:hover { color:var(--purple-bright); text-decoration:underline; }
+    .toggle-senha { position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:var(--text-muted); padding:0; display:flex; align-items:center; transition:color .2s; }
+    .toggle-senha:hover { color:var(--purple-light); }
+    .divider { display:flex; align-items:center; gap:.75rem; margin:1.5rem 0; color:var(--text-muted); font-size:.85rem; }
+    .divider::before,.divider::after { content:''; flex:1; height:1px; background:var(--border); }
+    .btn { width:100%; padding:.85rem; border-radius:12px; font-family:'Outfit',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; border:none; transition:transform .18s,box-shadow .18s; letter-spacing:.3px; }
+    .btn:active { transform:scale(.97); }
+    .btn-primary { background:linear-gradient(135deg,#7b2ff7,#a855f7 60%,#d946ef); color:#fff; box-shadow:0 4px 24px rgba(123,47,247,.45); }
+    .btn-primary:hover { box-shadow:0 6px 36px rgba(168,85,247,.65); transform:translateY(-2px); }
+    .btn-secondary { background:transparent; color:var(--purple-light); border:2px solid var(--border); }
+    .btn-secondary:hover { border-color:var(--purple-mid); background:rgba(123,47,247,.12); color:var(--purple-glow); transform:translateY(-2px); }
+    .register-text { text-align:center; margin-top:1.4rem; font-size:.88rem; color:var(--text-muted); }
+    .register-text a { color:var(--purple-bright); font-weight:700; text-decoration:none; letter-spacing:.5px; transition:color .2s,text-shadow .2s; }
+    .register-text a:hover { color:#e879f9; text-shadow:0 0 12px rgba(217,70,239,.6); }
+    @media(max-width:500px){ .login-card{padding:2rem 1.4rem 2rem; border-radius:18px;} .welcome-title{font-size:1.55rem;} }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <main class="page-wrapper">
+    <div class="login-card" role="main">
+      <div class="logo-wrapper">
+        <img src="imagens/logo_animespot.png" alt="Logo AnimeSpot" class="logo-img" id="logo-animespot" />
+      </div>
+      <h1 class="welcome-title">Boas vindas ao AnimeSpot</h1>
+      <p class="subtitle">Faça login para continuar:</p>
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="input-nome">Nome</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <input type="text" id="input-nome" name="nome" class="form-input" placeholder="Seu nome completo" autocomplete="name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="input-email">E-mail</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            <input type="email" id="input-email" name="email" class="form-input" placeholder="seu@email.com" autocomplete="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="senha-row">
+            <label class="form-label" for="input-senha" style="margin-bottom:0;">Senha</label>
+            <a href="#" class="forgot-link" id="link-esqueceu-senha">Esqueceu sua senha?</a>
+          </div>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" id="input-senha" name="senha" class="form-input" placeholder="••••••••" autocomplete="current-password" required />
+            <button type="button" class="toggle-senha" id="toggle-senha-btn" aria-label="Mostrar/ocultar senha">
+              <svg id="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn-entrar">Entrar</button>
+        <div class="divider" aria-hidden="true">Ou</div>
+        <button type="button" class="btn btn-secondary" id="btn-criar-conta">Criar uma conta</button>
+      </form>
+      <p class="register-text">Não tem conta? <a href="#" id="link-crie-uma">CRIE UMA</a></p>
+    </div>
+  </main>
+  <script>
+    (function(){
+      const c=document.getElementById('stars');
+      for(let i=0;i<80;i++){
+        const s=document.createElement('div'); s.className='star';
+        const sz=(Math.random()*2.5+.5).toFixed(1);
+        s.style.cssText=`width:${sz}px;height:${sz}px;top:${(Math.random()*100).toFixed(1)}%;left:${(Math.random()*100).toFixed(1)}%;--dur:${(Math.random()*4+2).toFixed(1)}s;--del:${(Math.random()*6).toFixed(1)}s;--op:${(Math.random()*.5+.2).toFixed(2)};`;
+        c.appendChild(s);
+      }
+    })();
+    const tb=document.getElementById('toggle-senha-btn'),si=document.getElementById('input-senha'),ei=document.getElementById('eye-icon');
+    tb.addEventListener('click',function(){
+      const ip=si.type==='password'; si.type=ip?'text':'password';
+      ei.innerHTML=ip?'<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/>':'<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+    });
+    document.getElementById('login-form').addEventListener('submit',function(e){
+      e.preventDefault();
+      const n=document.getElementById('input-nome').value.trim(),em=document.getElementById('input-email').value.trim(),se=document.getElementById('input-senha').value;
+      if(!n||!em||!se){alert('Por favor, preencha todos os campos.');return;}
+      alert('Bem-vindo(a), '+n+'! Login realizado com sucesso.');
+    });
+    function irCadastro(){alert('Redirecionando para a página de cadastro...');}
+    document.getElementById('btn-criar-conta').addEventListener('click',irCadastro);
+    document.getElementById('link-crie-uma').addEventListener('click',function(e){e.preventDefault();irCadastro();});
+    document.getElementById('link-esqueceu-senha').addEventListener('click',function(e){e.preventDefault();alert('Funcionalidade de recuperação de senha em breve!');});
+  </script>
+</body>
+</html>
