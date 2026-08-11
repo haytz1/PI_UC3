@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma - Início</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#" class="notification-icon" aria-label="Notificações">
+                <i class="ph ph-bell"></i>
+            </a>
+            <a href="#" class="site-logo">Anime Spot</a>
+            <a href="#" class="nav-link active">Início</a>
+            <a href="#" class="nav-link">Planos</a>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-bar">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar animes, autores...">
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="#" class="nav-link">Login / Cadastro</a>
+            <a href="#" class="nav-link profile-link">
+                <i class="ph ph-user-circle"></i> Perfil
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Populares -->
+        <section class="section-populares">
+            <h2>Populares</h2>
+            <div class="carousel-wrapper">
+                <a href="#pop-page1" class="carousel-arrow prev"><i class="ph ph-caret-left"></i></a>
+                
+                <div class="carousel-container">
+                    <!-- Page 1 (Cards 1 to 5) -->
+                    <div class="carousel-page" id="pop-page1">
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 1</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 1.2k</span><span><i class="ph ph-chat-circle"></i> 340</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 2</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 950</span><span><i class="ph ph-chat-circle"></i> 210</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 3</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 890</span><span><i class="ph ph-chat-circle"></i> 150</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 4</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 800</span><span><i class="ph ph-chat-circle"></i> 120</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 5</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 760</span><span><i class="ph ph-chat-circle"></i> 110</span></div></div></article>
+                    </div>
+                    
+                    <!-- Page 2 (Cards 6 to 10) -->
+                    <div class="carousel-page" id="pop-page2">
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 6</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 700</span><span><i class="ph ph-chat-circle"></i> 95</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 7</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 650</span><span><i class="ph ph-chat-circle"></i> 80</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 8</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 600</span><span><i class="ph ph-chat-circle"></i> 75</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 9</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 550</span><span><i class="ph ph-chat-circle"></i> 60</span></div></div></article>
+                        <article class="card card-large"><div class="card-image"></div><div class="card-content"><h3>Popular 10</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 500</span><span><i class="ph ph-chat-circle"></i> 45</span></div></div></article>
+                    </div>
+                </div>
+
+                <a href="#pop-page2" class="carousel-arrow next"><i class="ph ph-caret-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Continue Lendo -->
+        <section class="section-continue">
+            <h2>Continue lendo</h2>
+            <div class="continue-card">
+                <div class="card-image"></div>
+                <div class="continue-info">
+                    <h3>Última História Acessada</h3>
+                    <p>Você parou no Capítulo 4. Continue de onde parou e descubra o que acontece a seguir.</p>
+                    <button class="btn-cta btn-small">Continuar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mais Recentes -->
+        <section class="section-grid">
+            <h2>Mais recentes</h2>
+            <div class="carousel-wrapper">
+                <a href="#rec-page1" class="carousel-arrow prev"><i class="ph ph-caret-left"></i></a>
+                
+                <div class="carousel-container">
+                    <div class="carousel-page" id="rec-page1">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 1</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 10</span><span><i class="ph ph-chat-circle"></i> 2</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 2</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 12</span><span><i class="ph ph-chat-circle"></i> 3</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 3</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 8</span><span><i class="ph ph-chat-circle"></i> 1</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 4</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 15</span><span><i class="ph ph-chat-circle"></i> 5</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 5</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 20</span><span><i class="ph ph-chat-circle"></i> 8</span></div></div></article>
+                    </div>
+                    <div class="carousel-page" id="rec-page2">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 6</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 5</span><span><i class="ph ph-chat-circle"></i> 0</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 7</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 22</span><span><i class="ph ph-chat-circle"></i> 10</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 8</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 18</span><span><i class="ph ph-chat-circle"></i> 6</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 9</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 30</span><span><i class="ph ph-chat-circle"></i> 12</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Recente 10</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 25</span><span><i class="ph ph-chat-circle"></i> 9</span></div></div></article>
+                    </div>
+                </div>
+
+                <a href="#rec-page2" class="carousel-arrow next"><i class="ph ph-caret-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Atualizados -->
+        <section class="section-grid">
+            <h2>Atualizados</h2>
+            <div class="carousel-wrapper">
+                <a href="#atu-page1" class="carousel-arrow prev"><i class="ph ph-caret-left"></i></a>
+                
+                <div class="carousel-container">
+                    <div class="carousel-page" id="atu-page1">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 1</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 45</span><span><i class="ph ph-chat-circle"></i> 15</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 2</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 50</span><span><i class="ph ph-chat-circle"></i> 20</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 3</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 60</span><span><i class="ph ph-chat-circle"></i> 22</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 4</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 35</span><span><i class="ph ph-chat-circle"></i> 10</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 5</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 42</span><span><i class="ph ph-chat-circle"></i> 18</span></div></div></article>
+                    </div>
+                    <div class="carousel-page" id="atu-page2">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 6</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 55</span><span><i class="ph ph-chat-circle"></i> 25</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 7</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 70</span><span><i class="ph ph-chat-circle"></i> 30</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 8</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 80</span><span><i class="ph ph-chat-circle"></i> 35</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 9</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 65</span><span><i class="ph ph-chat-circle"></i> 28</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Atualizado 10</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 90</span><span><i class="ph ph-chat-circle"></i> 40</span></div></div></article>
+                    </div>
+                </div>
+
+                <a href="#atu-page2" class="carousel-arrow next"><i class="ph ph-caret-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Mais Curtidas -->
+        <section class="section-grid">
+            <h2>Mais curtidas</h2>
+            <div class="carousel-wrapper">
+                <a href="#curt-page1" class="carousel-arrow prev"><i class="ph ph-caret-left"></i></a>
+                
+                <div class="carousel-container">
+                    <div class="carousel-page" id="curt-page1">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 1</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 5k</span><span><i class="ph ph-chat-circle"></i> 400</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 2</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 4.8k</span><span><i class="ph ph-chat-circle"></i> 380</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 3</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 4.5k</span><span><i class="ph ph-chat-circle"></i> 350</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 4</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 4.2k</span><span><i class="ph ph-chat-circle"></i> 300</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 5</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 4k</span><span><i class="ph ph-chat-circle"></i> 280</span></div></div></article>
+                    </div>
+                    <div class="carousel-page" id="curt-page2">
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 6</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 3.8k</span><span><i class="ph ph-chat-circle"></i> 250</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 7</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 3.5k</span><span><i class="ph ph-chat-circle"></i> 220</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 8</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 3.2k</span><span><i class="ph ph-chat-circle"></i> 200</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 9</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 3k</span><span><i class="ph ph-chat-circle"></i> 180</span></div></div></article>
+                        <article class="card"><div class="card-image"></div><div class="card-content"><h3>Top Curtidas 10</h3><div class="card-stats"><span><i class="ph ph-heart"></i> 2.8k</span><span><i class="ph ph-chat-circle"></i> 150</span></div></div></article>
+                    </div>
+                </div>
+
+                <a href="#curt-page2" class="carousel-arrow next"><i class="ph ph-caret-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Autores em Altas -->
+        <section class="section-autores">
+            <h2>Autores em Altas</h2>
+            <div class="carousel-wrapper">
+                <a href="#aut-page1" class="carousel-arrow prev"><i class="ph ph-caret-left"></i></a>
+                
+                <div class="carousel-container autores-grid">
+                    <div class="carousel-page" id="aut-page1">
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 1</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 2</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 3</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 4</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 5</h4></div>
+                    </div>
+                    <div class="carousel-page" id="aut-page2">
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 6</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 7</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 8</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 9</h4></div>
+                        <div class="autor-card"><div class="autor-avatar"></div><h4>Autor 10</h4></div>
+                    </div>
+                </div>
+
+                <a href="#aut-page2" class="carousel-arrow next"><i class="ph ph-caret-right"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating CTA Button -->
+    <button class="btn-cta btn-floating">
+        <i class="ph ph-map-trifold"></i> Filtro / Mapa
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3 class="site-logo" style="margin:0;">Anime Spot</h3>
+                <p>O seu destino final para ler e descobrir os melhores animes, mangás e autores em um só lugar.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Planos</a></li>
+                    <li><a href="#">Mais Recentes</a></li>
+                    <li><a href="#">Autores em Altas</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#" aria-label="Discord"><i class="ph ph-discord-logo"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Plataforma PI_UC3 - Anime Spot. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
