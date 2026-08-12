@@ -23,7 +23,8 @@
 - um texto escrito: Ou
 - selecionar um botão escrito Criar uma conta
  
-
+## Linkar com outra tela 
+- linkar com a tela de cadastro.html na parte: 'Não tem conta? Crie Uma' 
 
 
  
