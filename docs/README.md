@@ -13,10 +13,10 @@ Estas sao a telas do projeto integrador do grupo amarelo.
 ## Divisao de Tarefas
 
 - Tela inicial - Matheus
-- Historico - Matheus
+- Filtro/Mapa - Matheus
 - Planos - Laura
-- Notificaçoes - Laura
+- Moedas - Laura
+- Historico - Gui
 - Historia - Gui
-- Filtro/Mapa - Gui
 - Login/Cadastro - Lorena
 - Perfil - Lorena
