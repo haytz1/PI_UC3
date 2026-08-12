@@ -14,7 +14,6 @@
 - Use a fonte Chivo Latin 700 normal
 
 ### Correções
-- Ajeitar as bordas dos genêros
-- Diminuir as obras no meio
-- Trocar a aba de usuário de lugar talvez, aumentar ou diminuir o tamanho
-- Tentar criar as obras lidas em um determinado tempo, no máximo 3 à 5 obras, quando houver mais substituir pelas outras
+- Deve apresentar quantos capítulos cada uma delas está de acordo em qual capítulo o usuário está na leitura na aba de obras lidas
+ 
+

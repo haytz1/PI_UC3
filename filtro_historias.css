@@ -54,6 +54,14 @@ body {
     z-index: 50;
 }
 
+.icone-perfil{
+    width: 20px;
+    align-items: center;   
+    display: inline-flex;
+    gap: 2px;
+    vertical-align: middle;
+}
+
 .barra-pesquisa-wrapper {
     display: flex;
     align-items: center;
@@ -98,10 +106,12 @@ body {
     background-color: #C384FF;
     color: #15092E;
     padding: 8px 14px;
+    border: none;
     border-radius: 6px;
     font-size: 0.9rem;
+    font-weight: bold;
     list-style: none;
-    user-select: none;
+    transition: 0.2s;
 }
 
 .filtro-icone::-webkit-details-marker {
@@ -110,37 +120,76 @@ body {
 
 .filtro-icone:hover {
     background-color: #a960e0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(195, 132, 255, 0.25);
 }
 
 .filtro-generos {
     position: absolute;
     right: 0;
     top: calc(100% + 8px);
+    width:220px;
     background-color: #1e0f40;
     border: 1px solid #C384FF;
-    border-radius: 8px;
-    padding: 12px 16px;
+    border-radius: 12px;
+    padding: 14px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
     min-width: 180px;
-    z-index: 200;
+    z-index: 1000;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(195, 132, 255, 0.12);
 }
 
 .filtro-generos label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    padding: 8px 9px;
+    border-radius: 7px;
     font-size: 0.9rem;
     color: #C384FF;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filtro-generos label:hover {
+    background-color: rgba(195, 132, 255, 0.12);
+    color: #ddaaff;
+    transform: translateX(3px);
 }
 
 .filtro-generos input[type="checkbox"] {
-    accent-color: #C384FF;
-    width: 15px;
-    height: 15px;
+    appearance: none;
+    width: 16px;                                              
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 2px solid #C384FF;
+    background-color: transparent;
     cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.filtro-generos input[type="checkbox"]:checked {
+    background-color: #C384FF;
+    border-color: #C384FF;
+}
+
+.filtro-generos input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #15092e;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* =====================
@@ -157,50 +206,63 @@ body {
    PAINEL DO USUÁRIO (aside)
    ===================== */
 .painel-usuario {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 280px;
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    background-color: #1e0f40;
-    border: 1px solid #C384FF;
-    border-radius: 10px;
-    padding: 20px 16px;
-    width: 180px;
-    min-width: 160px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 72px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #c384ff;
+    border-radius: 14px;
+    justify-content: center;
+}
+
+.cabecalho-perfil{
+    margin-bottom: 8px;
 }
 
 .usuario-foto {
-    width: 100%;
+    width: 150px;
+    height: 150px;
     aspect-ratio: 1 / 1.4;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     border: 2px solid #C384FF;
+    align-items: center;
 }
 
 .usuario-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 0 0 20px rgba(193, 124, 255, 0.12);
 }
 
 .usuario-nome {
-    font-size: 1rem;
+    font-size: 20px;
     color: #C384FF;
     text-align: center;
+    margin-bottom: 10px;
+    margin-top:15px;
+    font-weight: bold;
 }
 
 .obras-lidas {
     width: 100%;
+    margin-top: 10px;
 }
 
 .obras-lidas-titulo {
-    font-size: 0.8rem;
+    font-size: 20px;
     color: rgba(195, 132, 255, 0.7);
-    margin-bottom: 6px;
+    margin-bottom: 25px;
+    margin: 0 0 30px;
     text-align: center;
+    font-weight: bold;
 }
 
 .obras-lidas ul {
@@ -208,15 +270,29 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.obras-lidas li:hover{
+    border-color: #b66cff;
+    background: #29134f;
+    transform: translateX(-2px);
 }
 
 .obras-lidas ul li {
-    font-size: 0.8rem;
+    font-size: 15px;
     color: #C384FF;
     text-align: center;
     background-color: rgba(195, 132, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 6px;
+    border: 1px solid transparent;
     padding: 4px 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: 0.2s;
 }
 
 .btn-historico {
@@ -229,8 +305,8 @@ body {
     padding: 8px 0;
     border-radius: 6px;
     font-family: 'Chivo', sans-serif;
-    font-size: 0.85rem;
-    margin-top: 4px;
+    font-size: 15px;
+    margin-top: 30px;
 }
 
 .btn-historico:hover {
@@ -242,9 +318,11 @@ body {
    ===================== */
 .grade-obras {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 260px);
     gap: 20px;
     flex: 1;
+    justify-content: center;
+    margin-left:120px;
 }
 
 /* =====================
@@ -260,6 +338,8 @@ body {
     align-items: center;
     padding-bottom: 14px;
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 260px;
+    height: 420px;
 }
 
 .card:hover {
