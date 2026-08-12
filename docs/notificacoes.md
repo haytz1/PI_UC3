@@ -16,6 +16,8 @@
 - no card da direita coloque o titulo "plano 2" e abaixo coloque o preco "35,00" e abaixo do preço coloque todas a funçoes que plano mais caro tem 
 - coloque um botao escrever "Assinar plano 2" logo abaixo das funções que o plano 2 tem 
 
+Crie um notificacoes.html e css
+
 ## Cores do site 
 - #15092e cor principal
 - #c384ff cor dos buttons
