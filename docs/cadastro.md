@@ -31,3 +31,5 @@
   - Em baixo coloque um botão escrito: Continuar com a Aplle e ao lado esquerdo a logo da Aplle
   - Em baixo coloque um botão escrito: Já tem uma conta? Fazer login 
 
+## Linkar com outra tela 
+- linkar com a tela login.html, na parte 'Já tem uma conta? Fazer login'

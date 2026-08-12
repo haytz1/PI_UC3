@@ -19,3 +19,7 @@
 ## Cores do site 
 - #15092e cor principal
 - #c384ff cor dos buttons
+
+## Linkar com outra tela 
+- adicione uma navbar escrito 'moedas'
+- linkar com  a página moedas.html
