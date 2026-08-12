@@ -279,32 +279,60 @@
                             </div>
                         </div>
                     </article>
+
+
+                
                 </div>
 
-                <!-- Adicionar Seção -->
-                <button class="btn-adicionar-secao" id="btn-adicionar-secao">
-                    <i class="ph ph-plus"></i> Adicionar seção
-                </button>
-            </section>
+ 
 
         </main>
 
         <!-- ===== SIDEBAR DIREITA ===== -->
         <aside class="sidebar-right" aria-label="Informações adicionais">
 
+            <span class="widget-title">Mapa do Site</span>
             <!-- Mapa do Site -->
-            <div class="sidebar-widget" id="widget-mapa">
-                <h3 class="widget-title"><i class="ph-fill ph-map-pin"></i> Mapa do site</h3>
-                <div class="mapa-container">
-                    <div class="mapa-bg"></div>
-                    <a href="#" class="mapa-tag mapa-noticias" id="mapa-noticias">Notícias</a>
-                    <a href="#" class="mapa-tag mapa-animes" id="mapa-animes">Animes</a>
-                    <a href="#" class="mapa-tag mapa-mangas" id="mapa-mangas">Mangás</a>
-                    <a href="#" class="mapa-tag mapa-eventos-tag" id="mapa-eventos">Eventos</a>
-                    <a href="#" class="mapa-tag mapa-comunidade" id="mapa-comunidade">Comunidade</a>
+            <div class="mapa-eventos">
+
+                <div class="pin pin-1">
+                    <span class="pin-icon">📍</span>
+
+                    <div class="map-evento-info">
+                        <strong>Anime Friends</strong>
+                        <span>📍 São Paulo Expo</span>
+                        <span>📅 18 de julho</span>
+                        <small>Animes</small>
+                    </div>
                 </div>
+
+
+                <div class="pin pin-2">
+                    <span class="pin-icon">📍</span>
+
+                    <div class="map-evento-info">
+                        <strong>Festival de Mangás</strong>
+                        <span>📍 Liberdade</span>
+                        <span>📅 25 de julho</span>
+                        <small>Mangás</small>
+                    </div>
+                </div>
+
+
+                <div class="pin pin-3">
+                    <span class="pin-icon">📍</span>
+
+                    <div class="map-evento-info">
+                        <strong>Encontro Otaku</strong>
+                        <span>📍 Centro de São Paulo</span>
+                        <span>📅 2 de agosto</span>
+                        <small>Comunidade</small>
+                    </div>
+                </div>
+
             </div>
 
+            
             <!-- Próximos Eventos -->
             <div class="sidebar-widget" id="widget-eventos">
                 <div class="widget-header">
@@ -413,43 +441,7 @@
         </div>
     </footer>
 
-    <script>
-        // Hero Carousel
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.hero-dot');
-        let current = 0;
-        let autoPlay;
 
-        function goToSlide(n) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = (n + slides.length) % slides.length;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                clearInterval(autoPlay);
-                goToSlide(parseInt(dot.dataset.slide));
-                startAutoPlay();
-            });
-        });
-
-        function startAutoPlay() {
-            autoPlay = setInterval(() => goToSlide(current + 1), 4500);
-        }
-        startAutoPlay();
-
-        // Sidebar links
-        document.querySelectorAll('.sidebar-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
 
 </body>
 
