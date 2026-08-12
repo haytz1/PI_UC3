@@ -51,4 +51,7 @@
   ## Salvar 
   - Embaixo de tudo coloque um botão escrito no canto inferior esquerdo: Salvar alterações
   - Ao lado esquerdo coloque um botão escrito: Cancelar
+
+  ## linkar com planos
+  - ao lado de planos atuais existe um link escrito Ver planos, linkar com a tela planos.html na parte 'Ver Planos' 
   
