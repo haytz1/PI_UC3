@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras do Vazio Leitura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Chivo', sans-serif;
+            background-color: #15092E;
+            color: #C384FF;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #C384FF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .capitulos {
+            background-color: #1e0f40;
+            color: #C384FF;
+            border: 1px solid #C384FF;
+            padding: 8px;
+            border-radius: 5px;
+            font-family: 'Chivo', sans-serif;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+        }
+        .leitura-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #1e0f40;
+            border: 1px solid #C384FF;
+            border-radius: 10px;
+            min-height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(195, 132, 255, 0.1);
+        }
+        .info-progresso {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .progresso-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #1e0f40;
+            border: 1px solid #C384FF;
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .progresso-barra {
+            height: 100%;
+            background-color: #C384FF;
+            width: 50%; /* Marcador de progresso estático */
+        }
+        .controles {
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            background-color: #C384FF;
+            color: #15092E;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn:hover {
+            background-color: #a960e0;
+            transform: translateY(-2px);
+        }
+        .btn-voltar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: transparent;
+            color: #C384FF;
+            border: 1px solid #C384FF;
+        }
+        .btn-voltar:hover {
+            background-color: #C384FF;
+            color: #15092E;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="obras_mangas.html" class="btn btn-voltar">⭠ Voltar</a>
+
+    <div class="header">
+        <h1>Sombras do Vazio</h1>
+        <select class="capitulos">
+            <optgroup label="Capítulos">
+                <option value="1">Capítulo 1</option>
+                <option value="2">Capítulo 2</option>
+                <option value="3" selected>Capítulo 3</option>
+                <option value="4">Capítulo 4</option>
+                <option value="5">Capítulo 5</option>
+                <option value="... disabled">... (até cap 48)</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div class="info-progresso">
+        <span>Progresso da Obra</span>
+        <span>50% (Página 10/20)</span>
+    </div>
+    <div class="progresso-container" title="Progresso da leitura">
+        <div class="progresso-barra"></div>
+    </div>
+
+    <div class="leitura-container">
+        <p>Conteúdo da obra "Sombras do Vazio" sendo visualizado aqui...</p>
+    </div>
+
+    <div class="controles">
+        <a href="#" class="btn">Página Anterior</a>
+        <a href="#" class="btn">Próxima Página</a>
+    </div>
+
+</body>
+</html>

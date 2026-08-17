@@ -1,7 +1,7 @@
 /* =====================
    FONTE & RESET
    ===================== */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 * {
     margin: 0;
@@ -10,9 +10,9 @@
 }
 
 body {
-    font-family: 'Chivo', sans-serif;
-    background-color: #15092E;
-    color: #C384FF;
+    font-family: 'Inter', sans-serif;
+    background-color: #0d1117;
+    color: #8b5cf6;
     min-height: 100vh;
 }
 
@@ -24,19 +24,19 @@ body {
     position: fixed;
     top: 16px;
     left: 16px;
-    color: #C384FF;
+    color: #8b5cf6;
     text-decoration: none;
     font-size: 1rem;
-    background-color: rgba(195, 132, 255, 0.1);
-    border: 1px solid #C384FF;
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 1px solid #8b5cf6;
     padding: 6px 14px;
     border-radius: 6px;
     z-index: 100;
 }
 
 .btn-voltar:hover {
-    background-color: #C384FF;
-    color: #15092E;
+    background-color: #8b5cf6;
+    color: #0d1117;
 }
 
 /* =====================
@@ -47,8 +47,8 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 16px 24px;
-    background-color: #1e0f40;
-    border-bottom: 1px solid #C384FF;
+    background-color: #161b22;
+    border-bottom: 1px solid #8b5cf6;
     position: sticky;
     top: 0;
     z-index: 50;
@@ -69,10 +69,10 @@ body {
 }
 
 .barra-pesquisa {
-    background-color: #15092E;
-    border: 1px solid #C384FF;
-    color: #C384FF;
-    font-family: 'Chivo', sans-serif;
+    background-color: #0d1117;
+    border: 1px solid #8b5cf6;
+    color: #8b5cf6;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     padding: 8px 14px;
     border-radius: 6px;
@@ -81,7 +81,7 @@ body {
 }
 
 .barra-pesquisa::placeholder {
-    color: rgba(195, 132, 255, 0.5);
+    color: rgba(139, 92, 246, 0.5);
 }
 
 .barra-pesquisa:focus {
@@ -90,7 +90,7 @@ body {
 
 .resultado-pesquisa {
     font-size: 0.85rem;
-    color: rgba(195, 132, 255, 0.7);
+    color: rgba(139, 92, 246, 0.7);
     min-width: 80px;
 }
 
@@ -103,8 +103,8 @@ body {
 
 .filtro-icone {
     cursor: pointer;
-    background-color: #C384FF;
-    color: #15092E;
+    background-color: #8b5cf6;
+    color: #0d1117;
     padding: 8px 14px;
     border: none;
     border-radius: 6px;
@@ -119,9 +119,9 @@ body {
 }
 
 .filtro-icone:hover {
-    background-color: #a960e0;
+    background-color: #a78bfa;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(195, 132, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
 }
 
 .filtro-generos {
@@ -129,8 +129,8 @@ body {
     right: 0;
     top: calc(100% + 8px);
     width:220px;
-    background-color: #1e0f40;
-    border: 1px solid #C384FF;
+    background-color: #161b22;
+    border: 1px solid #8b5cf6;
     border-radius: 12px;
     padding: 14px;
     box-sizing: border-box;
@@ -141,7 +141,7 @@ body {
     z-index: 1000;
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.45),
-        0 0 20px rgba(195, 132, 255, 0.12);
+        0 0 20px rgba(139, 92, 246, 0.12);
 }
 
 .filtro-generos label {
@@ -151,14 +151,14 @@ body {
     padding: 8px 9px;
     border-radius: 7px;
     font-size: 0.9rem;
-    color: #C384FF;
+    color: #8b5cf6;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .filtro-generos label:hover {
-    background-color: rgba(195, 132, 255, 0.12);
-    color: #ddaaff;
+    background-color: rgba(139, 92, 246, 0.12);
+    color: #c4b5fd;
     transform: translateX(3px);
 }
 
@@ -169,7 +169,7 @@ body {
     margin: 0;
     flex-shrink: 0;
     border-radius: 4px;
-    border: 2px solid #C384FF;
+    border: 2px solid #8b5cf6;
     background-color: transparent;
     cursor: pointer;
     position: relative;
@@ -177,8 +177,8 @@ body {
 }
 
 .filtro-generos input[type="checkbox"]:checked {
-    background-color: #C384FF;
-    border-color: #C384FF;
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
 }
 
 .filtro-generos input[type="checkbox"]:checked::after {
@@ -187,7 +187,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #15092e;
+    color: #0d1117;
     font-size: 12px;
     font-weight: bold;
 }
@@ -216,7 +216,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     padding: 20px;
-    border: 1px solid #c384ff;
+    border: 1px solid #8b5cf6;
     border-radius: 14px;
     justify-content: center;
 }
@@ -231,7 +231,7 @@ body {
     aspect-ratio: 1 / 1.4;
     border-radius: 12px;
     overflow: hidden;
-    border: 2px solid #C384FF;
+    border: 2px solid #8b5cf6;
     align-items: center;
 }
 
@@ -239,12 +239,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 0 20px rgba(193, 124, 255, 0.12);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.12);
 }
 
 .usuario-nome {
     font-size: 20px;
-    color: #C384FF;
+    color: #8b5cf6;
     text-align: center;
     margin-bottom: 10px;
     margin-top:15px;
@@ -258,7 +258,7 @@ body {
 
 .obras-lidas-titulo {
     font-size: 20px;
-    color: rgba(195, 132, 255, 0.7);
+    color: rgba(139, 92, 246, 0.7);
     margin-bottom: 25px;
     margin: 0 0 30px;
     text-align: center;
@@ -275,16 +275,16 @@ body {
 }
 
 .obras-lidas li:hover{
-    border-color: #b66cff;
-    background: #29134f;
+    border-color: #a78bfa;
+    background: #1c2128;
     transform: translateX(-2px);
 }
 
 .obras-lidas ul li {
     font-size: 15px;
-    color: #C384FF;
+    color: #8b5cf6;
     text-align: center;
-    background-color: rgba(195, 132, 255, 0.1);
+    background-color: rgba(139, 92, 246, 0.1);
     border-radius: 6px;
     border: 1px solid transparent;
     padding: 4px 8px;
@@ -299,18 +299,18 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background-color: #C384FF;
-    color: #15092E;
+    background-color: #8b5cf6;
+    color: #0d1117;
     text-decoration: none;
     padding: 8px 0;
     border-radius: 6px;
-    font-family: 'Chivo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     margin-top: 30px;
 }
 
 .btn-historico:hover {
-    background-color: #a960e0;
+    background-color: #a78bfa;
 }
 
 /* =====================
@@ -329,8 +329,8 @@ body {
    CARD
    ===================== */
 .card {
-    background-color: #1e0f40;
-    border: 1px solid #C384FF;
+    background-color: #161b22;
+    border: 1px solid #8b5cf6;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -344,7 +344,7 @@ body {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(195, 132, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
 }
 
 .card-imagem {
@@ -356,7 +356,7 @@ body {
 
 .card-nome {
     font-size: 0.9rem;
-    color: #C384FF;
+    color: #8b5cf6;
     text-align: center;
     margin: 10px 10px 4px;
     font-size: 0.95rem;
@@ -364,14 +364,14 @@ body {
 
 .card-autor {
     font-size: 0.78rem;
-    color: rgba(195, 132, 255, 0.7);
+    color: rgba(139, 92, 246, 0.7);
     text-align: center;
     padding: 0 8px;
 }
 
 .card-capitulos {
     font-size: 0.78rem;
-    color: rgba(195, 132, 255, 0.5);
+    color: rgba(139, 92, 246, 0.5);
     text-align: center;
     margin-top: 4px;
 }
