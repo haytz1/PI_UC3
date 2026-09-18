@@ -16,4 +16,4 @@
 ### Correções
 - Deve apresentar quantos capítulos cada uma delas está de acordo em qual capítulo o usuário está na leitura na aba de obras lidas
  
-
+- Está página mostrará as histórias criadas pelos usuarios, servindo como catálogo e vai ter algum campo que redirecionará o usuário para outra página que será responsável pela criação da história de sua própria criação, tendo um formulário específico para criar.

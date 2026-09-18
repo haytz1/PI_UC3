@@ -15,6 +15,8 @@
 
 ## Linkar com outra tela
 - Crie uma seta no canto superior esquerdo para retornar para outra tela 
-- linkar com o link filtro_historias.html
+- linkar com o link obras_mangas.html
 
-
+## Recomendações
+- Utilize o html que criei para isso, o "historico.html"
+- Esse linkamento será em um botão no site do "obras", coloque-o do lado direito do botão "voltar para o Menu" e o estilize de acordo

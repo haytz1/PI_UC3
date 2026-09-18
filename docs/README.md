@@ -17,6 +17,6 @@ Estas sao a telas do projeto integrador do grupo amarelo.
 - Planos - Laura
 - Moedas - Laura
 - Historico - Gui
-- Historia - Gui
+- Obras - Gui
 - Login/Cadastro - Lorena
 - Perfil - Lorena
