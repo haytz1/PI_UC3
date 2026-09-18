@@ -19,11 +19,11 @@ body {
 /* =====================
    BOTÃO VOLTAR
    ===================== */
-.btn-voltar {
+.btn-voltar,
+.btn-historico-link {
     display: inline-block;
     position: fixed;
     top: 16px;
-    left: 16px;
     color: #8b5cf6;
     text-decoration: none;
     font-size: 1rem;
@@ -32,11 +32,26 @@ body {
     padding: 6px 14px;
     border-radius: 6px;
     z-index: 100;
+    transition: all 0.2s ease;
 }
 
-.btn-voltar:hover {
+.btn-voltar {
+    left: 16px;
+}
+
+.btn-historico-link {
+    left: 210px;
+    background-color: #c384ff;
+    border-color: #c384ff;
+    color: #15092e;
+    font-weight: 700;
+}
+
+.btn-voltar:hover,
+.btn-historico-link:hover {
     background-color: #8b5cf6;
     color: #0d1117;
+    transform: translateY(-1px);
 }
 
 /* =====================

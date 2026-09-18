@@ -20,3 +20,6 @@
 ## Recomendações
 - Utilize o html que criei para isso, o "historico.html"
 - Esse linkamento será em um botão no site do "obras", coloque-o do lado direito do botão "voltar para o Menu" e o estilize de acordo
+
+## Correções
+- Deve ser colocado um parâmetro em que a partir de 1 ano e 6 meses, a história em que o usuário esteja lendo seja considerada como "abandonada", mas só depois desse período.
